@@ -1,0 +1,18 @@
+{
+  "name": "vehicledatadashboard",
+  "version": "1.0.0",
+  "description": "**VehicleDataDashboard** är ett projekt som syftar till att utveckla en interaktiv fordonsdashboard med realtidsuppdateringar och historisk datahantering. Dashboarden använder simulerad fordonsdata för att visualisera och analysera parametrar som hastighet, bränsleförbrukning och säkerhetsvarningar. Projektet är designat för att visa hur datadriven teknik kan användas för att förbättra övervakning, prestanda och säkerhet i fordonsindustrin.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chart.js": "^4.4.6",
+    "express": "^4.21.1",
+    "mongoose": "^8.8.1",
+    "socket.io": "^4.8.1"
+  }
+}
