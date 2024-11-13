@@ -1,21 +1,24 @@
 const express = require('express');
 const http = require('http');
-const { Server } = require('socket.io'); // Make sure this syntax is correct for your version of Socket.io
+const { Server } = require('socket.io');
+const dataRoutes = require('./routes/dataRoutes');
 
 const app = express();
-const server = http.createServer(app); // Create an HTTP server
-const io = new Server(server); // Initialize Socket.io with the HTTP server
+const server = http.createServer(app);
+const io = new Server(server);
 
 const PORT = process.env.PORT || 3000;
 
-// Sample route to check if the server is working
+app.use(express.json());
+app.use('/api', dataRoutes);
+
 app.get('/', (req, res) => {
-    res.send('Socket.io server is running');
+    res.send('Welcome to the WebSocket and API server!');
 });
 
-// Listen for WebSocket connections
+
 io.on('connection', (socket) => {
-    console.log('New client connected');
+    console.log('New WebSocket connection established');
 
     const data = {
         speed: Math.random() * 100,
