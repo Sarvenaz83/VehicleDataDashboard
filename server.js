@@ -1,19 +1,32 @@
 const express = require('express');
 const http = require('http');
-const { Server } = require('socket.io'); // Make sure this syntax is correct for your version of Socket.io
+const { Server } = require('socket.io');
+const mongoose = require('mongoose');
+const cors = require('cors');
+
+const dataRoutes = require('./routes/dataRoutes');
 
 const app = express();
-const server = http.createServer(app); // Create an HTTP server
-const io = new Server(server); // Initialize Socket.io with the HTTP server
+const server = http.createServer(app); 
+const io = new Server(server);
+
+app.use(cors({ origin: 'http://localhost:3001' }));
+app.use(express.json());
+
+const mongoURI = 'mongodb://localhost:27017/vehicleDataDB';
+
+mongoose.connect(mongoURI)
+.then(() => console.log('Connected to MongoDB'))
+.catch((error) => console.error('MongoDB connection error:', error));
 
 const PORT = process.env.PORT || 3000;
 
-// Sample route to check if the server is working
 app.get('/', (req, res) => {
     res.send('Socket.io server is running');
 });
 
-// Listen for WebSocket connections
+app.use('/api', dataRoutes);
+
 io.on('connection', (socket) => {
     console.log('New client connected');
 
@@ -23,10 +36,8 @@ io.on('connection', (socket) => {
         safetyWarnings: Math.floor(Math.random() * 5),
     };
 
-    // Send a message to the client
     socket.emit('message', JSON.stringify(data));
 
-    // Handle messages from the client
     socket.on('clientMessage', (data) => {
         console.log('Received from client:', data);
     });
@@ -35,7 +46,6 @@ io.on('connection', (socket) => {
     });
 });
 
-// Start the server
 server.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
