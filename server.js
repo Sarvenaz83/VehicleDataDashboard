@@ -1,21 +1,51 @@
 const express = require('express');
-const http = require('http');
+const https = require('https');
+const fs = require('fs');
 const { Server } = require('socket.io');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const morgan = require('morgan');
 const logger = require('./utils/logger');
-
 const dataRoutes = require('./routes/dataRoutes');
-const { error } = require('console');
+require('dotenv').config();
 
 const app = express();
-const server = http.createServer(app); 
-const io = new Server(server);
 
-app.use(cors({ origin: 'http://localhost:3001' }));
+//Middleware
+const allowedOrigins = [
+    'http://localhost:3001'
+];
+
+const corsOptions = {
+    origin: (origin, callback) => {
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(morgan('combined'));
+
+//MongoDB connection
+const mongoURI = process.env.MONGO_URI;
+mongoose.connect(mongoURI)
+    .then(() => console.log('Connected to MongoDB'))
+    .catch((error) => console.error('MongoDB connection error:', error));
+
+//Routes
+app.get('/', (req, res) => {
+    res.send('Socket.io server is running');
+});
+
+app.use('/api', dataRoutes);
+
+//Error-handling middleware
 app.use((err, req, res, next) => {
     logger.error(`${err.message} - ${req.method} ${req.originalUrl}`);
     res.status(err.status || 500).json({
@@ -25,20 +55,23 @@ app.use((err, req, res, next) => {
     });
 });
 
-const mongoURI = 'mongodb://localhost:27017/vehicleDataDB';
+//Compression for Responses
+const compression = require('compression');
+app.use(compression());
 
-mongoose.connect(mongoURI)
-.then(() => console.log('Connected to MongoDB'))
-.catch((error) => console.error('MongoDB connection error:', error));
+//Security Enhancements
+const helmet = require('helmet');
+app.use(helmet());
 
-const PORT = process.env.PORT || 3000;
+//HTTPS Server and WebSocket
+const sslOptions = {
+    key: fs.readFileSync('key.pem'),
+    cert: fs.readFileSync('cert.pem')
+};
+const httpServer = https.createServer(sslOptions, app);
+const io = new Server(httpServer);
 
-app.get('/', (req, res) => {
-    res.send('Socket.io server is running');
-});
-
-app.use('/api', dataRoutes);
-
+//WebSocket events
 io.on('connection', (socket) => {
     console.log('New client connected');
 
@@ -58,14 +91,10 @@ io.on('connection', (socket) => {
     });
 });
 
-//Error handling middleware
-app.use((err, req, res, next) => {
-    console.error('Error:', err.message);
-    res.status(err.status || 500).json({
-        error: {
-            message: err.message || 'Internal Server Error'
-        }
-    });
+//Start server
+const PORT = process.env.PORT || 3001;
+httpServer.listen(PORT, () => {
+    console.log(`Secure server running on https://localhost:${PORT}`);
 });
 
 //Testloggor
@@ -73,6 +102,3 @@ logger.info('This is an info log');
 logger.warn('This is a warning log');
 logger.error('This is an error log');
 
-server.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
-});

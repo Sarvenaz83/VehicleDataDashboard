@@ -1,3 +1,71 @@
 {"level":"info","message":"This is an info log","timestamp":"2024-11-17T21:32:55.747Z"}
 {"level":"warn","message":"This is a warning log","timestamp":"2024-11-17T21:32:55.776Z"}
 {"level":"error","message":"This is an error log","timestamp":"2024-11-17T21:32:55.777Z"}
+{"level":"info","message":"This is an info log","timestamp":"2024-11-17T22:14:16.357Z"}
+{"level":"warn","message":"This is a warning log","timestamp":"2024-11-17T22:14:16.361Z"}
+{"level":"error","message":"This is an error log","timestamp":"2024-11-17T22:14:16.362Z"}
+{"level":"info","message":"This is an info log","timestamp":"2024-11-17T22:28:34.839Z"}
+{"level":"warn","message":"This is a warning log","timestamp":"2024-11-17T22:28:34.843Z"}
+{"level":"error","message":"This is an error log","timestamp":"2024-11-17T22:28:34.845Z"}
+{"level":"info","message":"This is an info log","timestamp":"2024-11-17T22:43:40.724Z"}
+{"level":"warn","message":"This is a warning log","timestamp":"2024-11-17T22:43:40.728Z"}
+{"level":"error","message":"This is an error log","timestamp":"2024-11-17T22:43:40.729Z"}
+{"level":"info","message":"This is an info log","timestamp":"2024-11-17T22:58:22.263Z"}
+{"level":"warn","message":"This is a warning log","timestamp":"2024-11-17T22:58:22.269Z"}
+{"level":"error","message":"This is an error log","timestamp":"2024-11-17T22:58:22.269Z"}
+{"level":"info","message":"Fetched vehicle data successfully","timestamp":"2024-11-17T22:59:17.709Z"}
+{"level":"info","message":"Fetched vehicle data successfully","timestamp":"2024-11-17T23:00:56.805Z"}
+{"level":"info","message":"This is an info log","timestamp":"2024-11-17T23:16:17.433Z"}
+{"level":"warn","message":"This is a warning log","timestamp":"2024-11-17T23:16:17.437Z"}
+{"level":"error","message":"This is an error log","timestamp":"2024-11-17T23:16:17.438Z"}
+{"level":"info","message":"Fetched vehicle data successfully","timestamp":"2024-11-17T23:16:25.799Z"}
+{"level":"info","message":"Saved new vehicle data succesfully","timestamp":"2024-11-17T23:18:13.619Z"}
+{"level":"info","message":"Fetched vehicle data successfully","timestamp":"2024-11-17T23:20:58.656Z"}
+{"level":"info","message":"This is an info log","timestamp":"2024-11-17T23:28:43.569Z"}
+{"level":"warn","message":"This is a warning log","timestamp":"2024-11-17T23:28:43.574Z"}
+{"level":"error","message":"This is an error log","timestamp":"2024-11-17T23:28:43.576Z"}
+{"level":"info","message":"Fetched vehicle data successfully","timestamp":"2024-11-17T23:28:47.172Z"}
+{"level":"info","message":"Fetched vehicle data successfully","timestamp":"2024-11-17T23:29:49.831Z"}
+{"level":"info","message":"Fetched vehicle data successfully","timestamp":"2024-11-17T23:29:51.871Z"}
+{"level":"info","message":"Saved new vehicle data succesfully","timestamp":"2024-11-17T23:30:11.952Z"}
+{"level":"info","message":"Fetched vehicle data successfully","timestamp":"2024-11-17T23:31:33.776Z"}
+{"level":"info","message":"Fetched vehicle data successfully","timestamp":"2024-11-17T23:34:31.466Z"}
+{"level":"info","message":"This is an info log","timestamp":"2024-11-17T23:35:19.384Z"}
+{"level":"warn","message":"This is a warning log","timestamp":"2024-11-17T23:35:19.387Z"}
+{"level":"error","message":"This is an error log","timestamp":"2024-11-17T23:35:19.388Z"}
+{"level":"info","message":"Fetched vehicle data successfully","timestamp":"2024-11-17T23:35:23.929Z"}
+{"level":"info","message":"Fetched vehicle data successfully","timestamp":"2024-11-17T23:36:18.277Z"}
+{"level":"info","message":"This is an info log","timestamp":"2024-11-17T23:50:09.584Z"}
+{"level":"warn","message":"This is a warning log","timestamp":"2024-11-17T23:50:09.589Z"}
+{"level":"error","message":"This is an error log","timestamp":"2024-11-17T23:50:09.590Z"}
+{"level":"info","message":"Fetched vehicle data successfully","timestamp":"2024-11-18T00:10:03.471Z"}
+{"level":"info","message":"This is an info log","timestamp":"2024-11-18T00:17:04.946Z"}
+{"level":"warn","message":"This is a warning log","timestamp":"2024-11-18T00:17:04.949Z"}
+{"level":"error","message":"This is an error log","timestamp":"2024-11-18T00:17:04.949Z"}
+{"level":"info","message":"This is an info log","timestamp":"2024-11-18T00:28:06.237Z"}
+{"level":"warn","message":"This is a warning log","timestamp":"2024-11-18T00:28:06.241Z"}
+{"level":"error","message":"This is an error log","timestamp":"2024-11-18T00:28:06.241Z"}
+{"level":"info","message":"This is an info log","timestamp":"2024-11-18T00:29:44.519Z"}
+{"level":"warn","message":"This is a warning log","timestamp":"2024-11-18T00:29:44.523Z"}
+{"level":"error","message":"This is an error log","timestamp":"2024-11-18T00:29:44.523Z"}
+{"level":"info","message":"This is an info log","timestamp":"2024-11-18T00:30:13.533Z"}
+{"level":"warn","message":"This is a warning log","timestamp":"2024-11-18T00:30:13.540Z"}
+{"level":"error","message":"This is an error log","timestamp":"2024-11-18T00:30:13.540Z"}
+{"level":"info","message":"This is an info log","timestamp":"2024-11-18T00:30:36.765Z"}
+{"level":"warn","message":"This is a warning log","timestamp":"2024-11-18T00:30:36.769Z"}
+{"level":"error","message":"This is an error log","timestamp":"2024-11-18T00:30:36.770Z"}
+{"level":"info","message":"This is an info log","timestamp":"2024-11-18T00:30:52.538Z"}
+{"level":"warn","message":"This is a warning log","timestamp":"2024-11-18T00:30:52.543Z"}
+{"level":"error","message":"This is an error log","timestamp":"2024-11-18T00:30:52.543Z"}
+{"level":"info","message":"This is an info log","timestamp":"2024-11-18T00:31:13.141Z"}
+{"level":"warn","message":"This is a warning log","timestamp":"2024-11-18T00:31:13.149Z"}
+{"level":"error","message":"This is an error log","timestamp":"2024-11-18T00:31:13.150Z"}
+{"level":"info","message":"This is an info log","timestamp":"2024-11-18T00:31:31.886Z"}
+{"level":"warn","message":"This is a warning log","timestamp":"2024-11-18T00:31:31.888Z"}
+{"level":"error","message":"This is an error log","timestamp":"2024-11-18T00:31:31.888Z"}
+{"level":"info","message":"This is an info log","timestamp":"2024-11-18T00:31:56.133Z"}
+{"level":"warn","message":"This is a warning log","timestamp":"2024-11-18T00:31:56.141Z"}
+{"level":"error","message":"This is an error log","timestamp":"2024-11-18T00:31:56.142Z"}
+{"level":"info","message":"This is an info log","timestamp":"2024-11-18T00:34:23.932Z"}
+{"level":"warn","message":"This is a warning log","timestamp":"2024-11-18T00:34:23.938Z"}
+{"level":"error","message":"This is an error log","timestamp":"2024-11-18T00:34:23.939Z"}
