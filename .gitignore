@@ -16,3 +16,4 @@ Thumbs.db
 # Ignorera andra beroende-mappar
 package-lock.json
 yarn.lock
+.env
