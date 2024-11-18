@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const VehicleData = require('../models/VehicleData');
+const vehicleData = require('../models/VehicleData');
 const logger = require('../utils/logger');
 
 let vehicleData = [
@@ -9,7 +9,7 @@ let vehicleData = [
 
 router.get('/data', async(req, res, next) => {
     try {
-        const data = await VehicleData.find();
+        const data = await vehicleData.find();
         logger.info('Fetched vehicle data successfully');
         res.json(data);
     }
@@ -26,7 +26,7 @@ router.post('/data', async(req, res, next) => {
         return res.status(400).json({ error: 'Missing required failed: spped, fuelConsumption, or safetyWarnings'});
     }
     try {
-        const newData = new VehicleData({ speed, fuelConsumption, safetyWarnings });
+        const newData = new vehicleData({ speed, fuelConsumption, safetyWarnings });
         await newData.save();
         logger.info('Saved new vehicle data succesfully');
         res.status(201).json(newData);
@@ -34,6 +34,16 @@ router.post('/data', async(req, res, next) => {
     catch (error) {
         logger.error(`Error saving data: ${error.message}`);
         next(error);
+    }
+});
+
+router.get('/data', async (req, res) => {
+    const { speed } = req.query;
+
+    try {
+        const data = await vehicleData.find({ speed: speed });
+    } catch (error) {
+        res.status(500).json({ error: 'Error fetching data' });
     }
 });
 

@@ -55,6 +55,20 @@ app.use((err, req, res, next) => {
     });
 });
 
+//Rate Limiting middleware
+const rateLimit = require('express-rate-limit');
+const limiter = rateLimit({
+    windowMs: 15 * 60 * 1000,
+    max: 100,
+    message: 'Too many requests from this IP, please try again later.'
+});
+
+app.use(limiter);
+
+//Prevent NoSQL Injection middleware
+const mongoSanitize = require('express-mongo-sanitize');
+app.use(mongoSanitize());
+
 //Compression for Responses
 const compression = require('compression');
 app.use(compression());
