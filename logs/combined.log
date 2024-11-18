@@ -69,3 +69,11 @@
 {"level":"info","message":"This is an info log","timestamp":"2024-11-18T00:34:23.932Z"}
 {"level":"warn","message":"This is a warning log","timestamp":"2024-11-18T00:34:23.938Z"}
 {"level":"error","message":"This is an error log","timestamp":"2024-11-18T00:34:23.939Z"}
+{"level":"info","message":"This is an info log","timestamp":"2024-11-18T00:37:36.371Z"}
+{"level":"warn","message":"This is a warning log","timestamp":"2024-11-18T00:37:36.374Z"}
+{"level":"error","message":"This is an error log","timestamp":"2024-11-18T00:37:36.375Z"}
+{"level":"info","message":"Fetched vehicle data successfully","timestamp":"2024-11-18T00:41:45.090Z"}
+{"level":"info","message":"Fetched vehicle data successfully","timestamp":"2024-11-18T01:01:41.206Z"}
+{"level":"info","message":"This is an info log","timestamp":"2024-11-18T01:02:36.644Z"}
+{"level":"warn","message":"This is a warning log","timestamp":"2024-11-18T01:02:36.648Z"}
+{"level":"error","message":"This is an error log","timestamp":"2024-11-18T01:02:36.649Z"}
