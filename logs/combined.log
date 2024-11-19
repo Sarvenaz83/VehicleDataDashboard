@@ -77,3 +77,6 @@
 {"level":"info","message":"This is an info log","timestamp":"2024-11-18T01:02:36.644Z"}
 {"level":"warn","message":"This is a warning log","timestamp":"2024-11-18T01:02:36.648Z"}
 {"level":"error","message":"This is an error log","timestamp":"2024-11-18T01:02:36.649Z"}
+{"level":"info","message":"This is an info log","timestamp":"2024-11-18T21:33:29.869Z"}
+{"level":"warn","message":"This is a warning log","timestamp":"2024-11-18T21:33:29.875Z"}
+{"level":"error","message":"This is an error log","timestamp":"2024-11-18T21:33:29.876Z"}
